@@ -9,6 +9,19 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        ht_tp: ht_tp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_TP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,10 +34,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp Q           &kp W           &kp E         &kp R        &kp T               &kp Y      &kp U        &kp I         &kp O       &kp P          &kp BSPC
-&kp TAB    &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LSHIFT D  &mt LCTRL F  &kp G               &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI  &kp SQT
-&kp LSHFT  &kp Z           &kp X           &kp C         &kp V        &kp B               &kp N      &kp M        &kp COMMA     &kp DOT     &kp FSLH       &kp ENTER
-                                           &kp LCTRL     &tog 1       &kp LEFT_COMMAND    &kp SPACE  &mo 2        &kp RALT
+&kp ESC    &kp Q              &kp W              &kp E            &kp R           &kp T               &kp Y      &kp U           &kp I            &kp O          &kp P             &kp BSPC
+&kp TAB    &ht_tp LEFT_GUI A  &ht_tp LEFT_ALT S  &ht_tp LSHIFT D  &ht_tp LCTRL F  &kp G               &kp H      &ht_tp RCTRL J  &ht_tp RSHIFT K  &ht_tp RALT L  &ht_tp RGUI SEMI  &kp SQT
+&kp LSHFT  &kp Z              &kp X              &kp C            &kp V           &kp B               &kp N      &kp M           &kp COMMA        &kp DOT        &kp FSLH          &kp ENTER
+                                                 &kp LCTRL        &mo 1           &kp LEFT_COMMAND    &kp SPACE  &mo 2           &kp RALT
             >;
         };
 
@@ -53,10 +66,10 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS         &kp KP_MULTIPLY             &kp LPAR                   &kp RPAR            &trans
-&kp F1  &kp F2    &kp F3  &kp F4    &kp F5    &kp F6       &kp MINUS  &mt RCTRL EQUAL  &mt RIGHT_SHIFT LEFT_BRACE  &mt RIGHT_ALT RIGHT_BRACE  &mt RGUI BACKSLASH  &kp GRAVE
-&kp F7  &kp F8    &kp F9  &kp F10   &kp F11   &kp F12      &kp UNDER  &kp PLUS         &kp LEFT_BRACKET            &kp RBKT                   &kp PIPE            &kp TILDE
-                          &trans    &trans    &trans       &trans     &trans           &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS            &kp KP_MULTIPLY                &kp LPAR                      &kp RPAR               &trans
+&kp F1  &kp F2    &kp F3  &kp F4    &kp F5    &kp F6       &kp MINUS  &ht_tp RCTRL EQUAL  &ht_tp RIGHT_SHIFT LEFT_BRACE  &ht_tp RIGHT_ALT RIGHT_BRACE  &ht_tp RGUI BACKSLASH  &kp GRAVE
+&kp F7  &kp F8    &kp F9  &kp F10   &kp F11   &kp F12      &kp UNDER  &kp PLUS            &kp LEFT_BRACKET               &kp RBKT                      &kp PIPE               &trans
+                          &trans    &trans    &trans       &trans     &trans              &trans
             >;
         };
 
