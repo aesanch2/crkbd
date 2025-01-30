@@ -51,10 +51,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp Q            &kp W           &kp E             &kp R           &kp T               &kp Y      &kp U           &kp I            &kp O           &kp P                    &kp BSPC
-&kp TAB    &lht_tp LCTRL A  &lht_tp LALT S  &lht_tp LSHIFT D  &lht_tp LGUI F  &kp G               &kp H      &rht_tp RGUI J  &rht_tp RSHFT K  &rht_tp RALT L  &rht_tp RCTRL SEMICOLON  &kp SQT
-&kp LCTRL  &kp Z            &kp X           &kp C             &kp V           &kp B               &kp N      &kp M           &kp COMMA        &kp DOT         &kp FSLH                 &kp ENTER
-                                            &kp LEFT_ALT      &mo 1           &kp LEFT_COMMAND    &kp SPACE  &mo 2           &kp RIGHT_SHIFT
+&kp ESC    &kp Q            &kp W           &kp E             &kp R           &kp T    &kp Y  &kp U           &kp I            &kp O           &kp P                    &kp BSPC
+&kp TAB    &lht_tp LCTRL A  &lht_tp LALT S  &lht_tp LSHIFT D  &lht_tp LGUI F  &kp G    &kp H  &rht_tp RGUI J  &rht_tp RSHFT K  &rht_tp RALT L  &rht_tp RCTRL SEMICOLON  &kp SQT
+&kp LCTRL  &kp Z            &kp X           &kp C             &kp V           &kp B    &kp N  &kp M           &kp COMMA        &kp DOT         &kp FSLH                 &kp ENTER
+                                            &tog 3            &kp LGUI        &mo 1    &mo 2  &kp SPACE       &kp RIGHT_SHIFT
             >;
         };
 
@@ -67,10 +67,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7    &kp N8    &kp N9     &kp N0     &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp LEFT  &kp UP    &kp DOWN   &kp RIGHT  &trans
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans
-                                        &trans        &trans        &trans          &trans  &trans    &trans
+&trans  &kp GRAVE               &trans                 &trans                  &trans                 &trans          &trans        &kp MINUS              &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &lht_tp LCTRL NUMBER_1  &lht_tp LALT NUMBER_2  &lht_tp LSHFT NUMBER_3  &lht_tp LGUI NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &rht_tp RGUI NUMBER_7  &rht_tp RSHFT N8  &rht_tp RALT N9   &rht_tp RCTRL N0   &trans
+&trans  &kp BACKSLASH           &trans                 &trans                  &trans                 &trans          &trans        &trans                 &trans            &trans            &trans             &trans
+                                                       &trans                  &trans                 &trans          &trans        &trans                 &trans
             >;
         };
 
@@ -83,14 +83,14 @@
 
             display-name = "Raise";
             bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY   &kp LPAR         &kp RPAR              &trans
-&kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6       &kp MINUS  &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp NON_US_BACKSLASH  &trans
-&kp F7     &kp F8    &kp F9  &kp F10   &kp F11   &kp F12      &kp UNDER  &kp PLUS   &kp LEFT_BRACKET  &kp RBKT         &kp PIPE              &trans
-                             &trans    &trans    &trans       &trans     &trans     &trans
+&none   &none   &none   &none    &none    &none      &none          &none     &none         &none      &kp PAGE_UP  &kp HOME
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &kp LEFT       &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none        &none
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &kp PAGE_DOWN  &none     &none         &none      &none        &kp END
+                        &trans   &trans   &trans     &trans         &trans    &trans
             >;
         };
 
-        media_layer { 
+        media_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -99,12 +99,12 @@
 
             display-name = "Media";
             bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY   &kp LPAR         &kp RPAR              &trans
-&kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6       &kp MINUS  &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp NON_US_BACKSLASH  &trans
-&kp F7     &kp F8    &kp F9  &kp F10   &kp F11   &kp F12      &kp UNDER  &kp PLUS   &kp LEFT_BRACKET  &kp RBKT         &kp PIPE              &trans
-                             &trans    &trans    &trans       &trans     &trans     &trans
+&none         &none         &none         &none         &none         &none             &none       &none              &none            &none  &kp C_PREVIOUS  &kp C_REWIND
+&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR_ALL    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none           &none
+&none         &none         &none         &none         &none         &none             &kp C_NEXT  &none              &none            &none  &none           &kp C_PLAY
+                                          &none         &none         &none             &none       &none              &none
             >;
-         };
+        };
 
         extra_2 { status = "reserved"; };
 
